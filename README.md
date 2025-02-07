@@ -51,3 +51,26 @@ Phases:
 
   Error is defined as the misclassification rate for the y-axis or the fraction of perdictions that are incorrect.  In our model this would be the misclassifications of (y-hat) which always equals 1 - accuracy.  So for example of the a model is 80% accurate the misclassification rate would be 0.20 or 20%. 
    
+##### Using KNeighborsClassifier
+KNeighborsClassifier below.
+
+weights : {'uniform', 'distance'} or callable, default='uniform'
+    Weight function used in prediction.  Possible values:
+
+    - 'uniform' : uniform weights.  All points in each neighborhood
+      are weighted equally.
+    - 'distance' : weight points by the inverse of their distance.
+      in this case, closer neighbors of a query point will have a
+      greater influence than neighbors which are further away.
+    - [callable] : a user-defined function which accepts an
+      array of distances, and returns an array of the same shape
+      containing the weights.
+
+===========================
+
+p : int, default=2
+    Power parameter for the Minkowski metric. When p = 1, this is
+    equivalent to using manhattan_distance (l1), and euclidean_distance
+    (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
+
+    See an example: [codio_assignment12_1.pynb](module-12/edit/main/codio/codio_assignment12_1.pynb)
