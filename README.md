@@ -74,3 +74,15 @@ p : int, default=2
     (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
 
 See an example: [codio_assignment12_1.ipynb](module-12/edit/main/codio/codio_assignment12_1.ipynb)
+
+## Decision Boundaries
+### Overview:
+To train a classifier on a dataset, you must define a set of hyperplanes. These hyperplanes are called decision boundaries, and they separate the data points into specific classes where the algorithm switches from one class to the next. A data point is more likely to be classified as class A on one side of a boundary and class B on the other.
+
+In the logistic regression example below, a decision boundary is a straight line that separates class A from class B. However, it is difficult in linear models to determine the exact boundary line separating the two classes, so points from class A have also come into the region of class B.
+
+Visualizing decision boundaries in this manner helps demonstrate how sensitive models are to the specific dataset, which can help understand how particular algorithms work and what their limitations are.
+
+### Predict_proba and Decision Thresholds
+Once you have selected a value for k, you then have choices to make about the decision threshold for your model.
+
