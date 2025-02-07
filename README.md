@@ -73,4 +73,4 @@ p : int, default=2
     equivalent to using manhattan_distance (l1), and euclidean_distance
     (l2) for p = 2. For arbitrary p, minkowski_distance (l_p) is used.
 
-    See an example: [codio_assignment12_1.ipynb](module-12/edit/main/codio/codio_assignment12_1.ipynb)
+See an example: [codio_assignment12_1.ipynb](module-12/edit/main/codio/codio_assignment12_1.ipynb)
