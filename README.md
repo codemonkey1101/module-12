@@ -84,5 +84,30 @@ In the logistic regression example below, a decision boundary is a straight line
 Visualizing decision boundaries in this manner helps demonstrate how sensitive models are to the specific dataset, which can help understand how particular algorithms work and what their limitations are.
 
 ### Predict_proba and Decision Thresholds
-Once you have selected a value for k, you then have choices to make about the decision threshold for your model.
+Once you have selected a value for k, you then have choices to make about the "decision threshold" for your model.
 
+Using Scikit-learn "predict_proba(ten_random_rows[["Income", "Debt"]])" you get 
+- the predictions about a class of a given sample
+- information about the level of confidence in the model
+where the order of the confidence values are in alphabetical order prediction class
+
+### Evaluating classifiers:
+Classification performance is measured either by a numeric metric, such as accuracy, or a graphical representation, such as a receiver operating characteristic (ROC) curve. Classification metrics are based on the true positives (TPs), false positives (FPs), false negatives (FNs), and true negatives (TNs) contained in the confusion matrix.
+
+[confusion-matrix](module-12/edit/main/images/confusion-matrix.png)
+
+The performance of a model can be evaluated using a variety of metrics. It is critical that you understand what each metric calculates to choose the best evaluation metric for your model. For example, models may be hailed as highly accurate, but depending on the question the model is trying to address, another metric may be more appropriate. The metrics that are typically used to determine the performance of a model are:
+- accuracy
+- precision
+- recall
+- F1.
+
+#### Accuracy
+Accuracy is the most intuitive measure of performance, as it is simply the ratio of correctly predicted observations to total observations. Accuracy can be deceiving in that it may signal a highly accurate model, but in all actuality, it has some weaknesses. Accuracy is only useful when the dataset is perfectly symmetrical, where values of FNs and FPs are almost identical, with similar costs. Accuracy is useful in cases where you have balanced classes, which implies that equal importance is given to both the positive and negative classes. Accuracy provides an overall view of the model’s performance.
+
+#### Precision
+Precision is the proportion of accurately predicted positive observations in relation to the total predicted positive observations. High precision is directly correlated to a low FP rate. This metric is use to evaluate the reliability of positive predictions made by a model. It answers the question: “Of all the instances predicted as positive, how many were actually positive?”. It is calculated as:
+
+Precision = TPs / (FPs + TPs​)
+
+Precision helps in avoiding FPs, also known as type I errors. FPs occur when the model predicts positive (e.g., disease) when the actual class is negative (e.g., healthy). In critical scenarios (e.g., medical diagnosis, fraud detection), FPs can have severe consequences. High precision minimizes false alarms and ensures that positive predictions are trustworthy. Precision becomes crucial when classes are imbalanced. It helps prevent the overestimation of positive cases. It shares an inverse relationship with recall. Increasing precision often leads to lower recall (and vice versa). Finding the right balance depends on the specific problem.
