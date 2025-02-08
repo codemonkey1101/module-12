@@ -94,7 +94,7 @@ where the order of the confidence values are in alphabetical order prediction cl
 ### Evaluating classifiers:
 Classification performance is measured either by a numeric metric, such as accuracy, or a graphical representation, such as a receiver operating characteristic (ROC) curve. Classification metrics are based on the true positives (TPs), false positives (FPs), false negatives (FNs), and true negatives (TNs) contained in the confusion matrix.
 
-![confusion-matrix](module-12/edit/main/images/confusion-matrix.png)
+![Alt text](module-12/edit/main/images/confusion-matrix.png)
 
 The performance of a model can be evaluated using a variety of metrics. It is critical that you understand what each metric calculates to choose the best evaluation metric for your model. For example, models may be hailed as highly accurate, but depending on the question the model is trying to address, another metric may be more appropriate. The metrics that are typically used to determine the performance of a model are:
 - accuracy
