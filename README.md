@@ -165,6 +165,7 @@ The results still hold true with regards to what happens when using different va
 Examples that include:
 - finding best k
 - inputing missing data using KNNImputer
+
 [codio_assignment12_4.ipynb](module-12/edit/main/codio/codio_assignment12_4.ipynb)
 
 ## Additional Resources, Further Reading, Bibliography, and More to Explore
