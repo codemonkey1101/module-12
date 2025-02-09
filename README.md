@@ -151,3 +151,25 @@ Specificity = TN / (TN + FP)
 #### F1
 F1 is the weighted average of both precision and recall. The F1 score is essential because it balances precision and recall, providing a single metric that considers both FPs and FNs. It provides a holistic view of model performance, especially in scenarios where precision and recall need careful consideration.
 
+## Using Nearest Neighbors for Regression
+
+The concept is basicall the same with regards to how it is used in Scikit-learn neighbors package accept:
+- the model that is used is called KNeighborsRegressor.
+- the output when performing a prediction is numeric value that represents a probability score
+
+The results still hold true with regards to what happens when using different values of k:
+- with k = 1, the line in the plot moves up and down erratically
+- as k gets larger the plot get smoother and eventually becomes completely flat
+- to select an optimum k you would use cross-validation while using MSE (mean squared error) to define our loss 
+
+Examples that include:
+- finding best k
+- inputing missing data using KNNImputer
+[codio_assignment12_4.ipynb](module-12/edit/main/codio/codio_assignment12_4.ipynb)
+
+## Additional Resources, Further Reading, Bibliography, and More to Explore
+
+- IBM. “What Is the K-Nearest Neighbors (KNN) Algorithm?” Accessed July 10, 2024. https://www.ibm.com/topics/knn Links to an external site..
+- GeeksforGeeks. “K-Nearest Neighbor (KNN) Algorithm.” Last modified July 5, 2024. https://www.geeksforgeeks.org/k-nearest-neighbours/ Links to an external site..
+- Harrison, Onel. “Machine Learning Basics with the K-Nearest Neighbors Algorithm.” Medium. Last modified September 10, 2018. https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761 Links to an external site..
+- Scikit-Learn. “KNeighborsClassifier.” Accessed July 8, 2024. https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html Links to an external site..
